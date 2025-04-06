@@ -38,31 +38,30 @@ interface OwnProps extends FP{
 // }
 
 
-const DetailAssets:React.FC<OwnProps> = ({asset, liability, equity, cash, billReceivable, TradeReceivable, showDetailAssets}) => {
+const DetailAssets: React.FC<OwnProps> = ({
+    asset, liability, equity, cash, billReceivable, TradeReceivable, showDetailAssets
+  }) => {
     return (
-        <div>
-
-                      
-
-            <h1 className="title"> 
-            {showDetailAssets("재무제표 상세 정보입니다.")}
-            </h1>
-            --------------------------------------------------
-           
-            <h2>
-                <ul className="assets">      
-                    <li> 자산 : {asset.valueOf()}</li>
-                    <li> 부채 :{liability.valueOf()}</li>
-                    <li> 자본 : {equity.valueOf()}</li>
-                    <li> 현금 : {cash.valueOf()}</li>
-                    <li> 받을어음 : {billReceivable.valueOf()}</li>
-                    <li> 매출채권 : {TradeReceivable.valueOf()}</li>
-            </ul> 
-            </h2>
-            --------------------------------------------------
+      <div className="detail-assets-container">
+        <h1 className="detail-assets-title">
+          {showDetailAssets("재무제표 상세 정보입니다.")}
+        </h1>
+        <hr className="separator" />
+  
+        <div className="asset-details-section">
+          <h2>재무 항목</h2>
+          <ul className="asset-details-list">
+            <li><strong>자산:</strong> {asset.valueOf()}</li>
+            <li><strong>부채:</strong> {liability.valueOf()}</li>
+            <li><strong>자본:</strong> {equity.valueOf()}</li>
+            <li><strong>현금:</strong> {cash.valueOf()}</li>
+            <li><strong>받을어음:</strong> {billReceivable.valueOf()}</li>
+            <li><strong>매출채권:</strong> {TradeReceivable.valueOf()}</li>
+          </ul>
         </div>
-       
-    )
-}
-
+        <hr className="separator" />
+      </div>
+    );
+  };
+  
 export default DetailAssets

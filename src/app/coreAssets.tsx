@@ -4,26 +4,25 @@ import { bankTypeOnlyIs } from "./model/bankType"
 
 interface OwnProps extends bankTypeOnlyIs {}
     
- 
-const coreAssets:React.FC<OwnProps> = ({IS}) => {
-    return ( 
-        <div>
-            <h1 className="title"> 
-                손익계산서입니다. 
-            </h1>
-            --------------------------------------------------
-           
-            <h2>
-                <ul className="IS">      
-                    <li> 수익 : {IS.revenue.valueOf()}</li>
-                    <li> 비용 : {IS.expense.valueOf()}</li>
-                    
-            </ul> 
-            </h2>
-            --------------------------------------------------
+const CoreAssets: React.FC<OwnProps> = ({ IS }) => {
+    return (
+      <div className="core-assets-container">
+        <h1 className="core-assets-title">
+          손익계산서입니다.
+        </h1>
+        <hr className="separator" />
+  
+        <div className="income-statement-section">
+          <h2>손익계산서 (Income Statement)</h2>
+          <ul className="is-list">
+            <li><strong>수익:</strong> {IS.revenue.valueOf()}</li>
+            <li><strong>비용:</strong> {IS.expense.valueOf()}</li>
+          </ul>
         </div>
-       
-    )
-}
+        <hr className="separator" />
+      </div>
+    );
+  };
+  
 
-export default coreAssets
+export default CoreAssets

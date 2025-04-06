@@ -9,36 +9,34 @@ interface OwnProps{
 }
  
 
-const Bank:React.FC<OwnProps> = ({info}) => {
+const Bank: React.FC<OwnProps> = ({ info }) => {
     return (
-        
-        <div>
-            
-            <h1 className="title"> 
-                {info.name}
-            </h1>
-            --------------------------------------------------
-            <h2>
-                <ul className="assets">      
-                    <li> 자산 : {info.FP.asset.valueOf()} </li> 
-                    <li> 부채 :  {info.FP.liability.valueOf()} </li> 
-                    <li> 자본 :  {info.FP.equity.valueOf()} </li> 
-                </ul> 
-            </h2>
-            --------------------------------------------------
-            <h2>
-                <ul className="is">
-                    <li> 수익 : {info.IS.revenue.valueOf()} </li>
-                    <li> 비용 : {info.IS.expense.valueOf()} </li>
-
-                </ul>
-            </h2>
-            --------------------------------------------------
-                               
-         </div>
-    )
-}
-
+      <div className="bank-container">
+        <h1 className="bank-title">{info.name}</h1>
+        <hr className="separator" />
+  
+        <div className="financials-section">
+          <h2>재무상태 (Balance Sheet)</h2>
+          <ul className="assets">
+            <li><strong>자산:</strong> {info.FP.asset.valueOf()}</li>
+            <li><strong>부채:</strong> {info.FP.liability.valueOf()}</li>
+            <li><strong>자본:</strong> {info.FP.equity.valueOf()}</li>
+          </ul>
+        </div>
+        <hr className="separator" />
+  
+        <div className="income-statement-section">
+          <h2>손익계산서 (Income Statement)</h2>
+          <ul className="is">
+            <li><strong>수익:</strong> {info.IS.revenue.valueOf()}</li>
+            <li><strong>비용:</strong> {info.IS.expense.valueOf()}</li>
+          </ul>
+        </div>
+        <hr className="separator" />
+      </div>
+    );
+  };
+  
 
 
 export default Bank

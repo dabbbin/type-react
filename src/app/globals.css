@@ -1,26 +1,219 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.bank-container {
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.bank-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #2C3E50; /* 어두운 파란색 */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.separator {
+  border: 0;
+  border-top: 2px solid #ddd;
+  margin: 20px 0;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.financials-section, .income-statement-section {
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #34495E; /* 좀 더 부드러운 어두운 회색 */
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+li strong {
+  color: #2C3E50; /* 어두운 파란색 */
+  font-weight: bold;
+}
+
+
+.core-assets-container {
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  background-color: #f9f9f9; /* 밝은 배경 */
+  border-radius: 8px;
+  width: 80%;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.core-assets-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #2C3E50; /* 어두운 파란색 */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.separator {
+  border: 0;
+  border-top: 2px solid #ddd;
+  margin: 20px 0;
+}
+
+.income-statement-section {
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #34495E; /* 부드러운 어두운 회색 */
+  margin-bottom: 10px;
+}
+
+ul.is-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+li strong {
+  color: #2C3E50; /* 어두운 파란색 */
+  font-weight: bold;
+}
+
+.detail-assets-container {
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  background-color: #f9f9f9; /* 밝은 배경 */
+  border-radius: 8px;
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.detail-assets-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #2C3E50; /* 어두운 파란색 */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.separator {
+  border: 0;
+  border-top: 2px solid #ddd;
+  margin: 20px 0;
+}
+
+.asset-details-section {
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #34495E; /* 부드러운 어두운 회색 */
+  margin-bottom: 10px;
+}
+
+ul.asset-details-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+li strong {
+  color: #2C3E50; /* 어두운 파란색 */
+  font-weight: bold;
+}
+
+.Page {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 30px; /* 각 컴포넌트 간의 간격을 30px로 설정 */
+  background-color: #f4f4f9; /* 배경을 부드러운 회색으로 설정 */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 페이지 주변에 그림자 추가 */
+}
+
+.Page > div {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;  /* 각 섹션에 둥근 모서리 추가 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 각 컴포넌트의 그림자 추가 */
+}
+
+.bank-container,
+.detail-assets-container,
+.core-assets-container {
+  margin-bottom: 20px; /* 각 컴포넌트 간 간격 */
+}
+
+h1, h2 {
+  color: #2C3E50;  /* 제목에 어두운 파란색 적용 */
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+h1 { 
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+li strong {
+  color: #2C3E50; /* 강조된 항목에 어두운 파란색 적용 */
+  font-weight: bold;
+}
+
+.separator {
+  border: 0;
+  border-top: 2px solid #ddd;
+  margin: 20px 0;
 }

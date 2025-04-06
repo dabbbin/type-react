@@ -37,11 +37,13 @@ const Home:React.FC = () => {
 
   return ( 
     <div className="Page">
-      <Bank info={data} changeFp={changeFp} />
         <div>
-        <DetailAssets asset={15000} 
+         <Bank info={data} changeFp={changeFp} />
+        </div>
+        <div>
+         <DetailAssets asset={15000} 
             liability={5000} equity={10000} cash={6000} billReceivable={2800} TradeReceivable={1200}
-            showDetailAssets={showDetailAssets} // 함수 전달 
+           showDetailAssets={showDetailAssets} // 함수 전달 
         />
         </div>
         <div>   
