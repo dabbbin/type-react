@@ -35,8 +35,6 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
-
-### Print  
-![image](https://github.com/user-attachments/assets/74806e67-fef9-42fa-8105-c9346f0fdffe)
+### QRCode  Generation & Scanner 
 
 
